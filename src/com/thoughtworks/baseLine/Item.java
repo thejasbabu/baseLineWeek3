@@ -1,6 +1,6 @@
 // Item class contains details about the item
 package com.thoughtworks.baseLine;
 
-public class Item {
-
+public interface Item {
+    public double netPrice();
 }
