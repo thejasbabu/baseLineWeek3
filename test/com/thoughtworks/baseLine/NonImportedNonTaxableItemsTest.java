@@ -8,14 +8,14 @@ public class NonImportedNonTaxableItemsTest {
 
     @Test
     public void shouldReturnTwentyAsItsNetAmountWhenItemWorthTwentyIsSent() {
-        NonImportedNonTaxableItems nonImportedNonTaxableItems = new NonImportedNonTaxableItems("Pizza", 25, 0);
+        NonImportedNonTaxableItems nonImportedNonTaxableItems = new NonImportedNonTaxableItems("Pizza", 25);
 
         assertEquals(25.0, nonImportedNonTaxableItems.netAmount(), 0.0);
     }
 
     @Test
     public void shouldReturnTheAmountOfTheItemAsItsNetAmount() {
-        NonImportedNonTaxableItems nonImportedNonTaxableItems = new NonImportedNonTaxableItems("Pizza", 20, 0);
+        NonImportedNonTaxableItems nonImportedNonTaxableItems = new NonImportedNonTaxableItems("Pizza", 20);
 
         assertEquals(20.0, nonImportedNonTaxableItems.netAmount(), 0.0);
     }

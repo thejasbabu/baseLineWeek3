@@ -3,17 +3,18 @@ package com.thoughtworks.baseLine;
 public class TaxableNonImportedItem implements Item{
     private String name;
     private double amount;
-    private double taxPercentage;
 
-    public TaxableNonImportedItem(String name, double amount, double taxPercentage) {
+    public TaxableNonImportedItem(String name, double amount) {
         this.name = name;
         this.amount = amount;
-        this.taxPercentage = taxPercentage;
     }
 
 
     @Override
     public double netAmount() {
-        return 110;
+        double netAmount = 0;
+        double taxPercentage = 10;
+        netAmount = ((taxPercentage * amount)/100 + amount );
+        return netAmount;
     }
 }

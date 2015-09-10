@@ -8,8 +8,15 @@ public class TaxableNonImportedItemTest {
 
     @Test
     public void shouldReturnHundredAndTenWhenItemWorthHundredIsSent() {
-        TaxableNonImportedItem taxableNonImportedItem = new TaxableNonImportedItem("Chocolate", 100, 10);
+        TaxableNonImportedItem taxableNonImportedItem = new TaxableNonImportedItem("Chocolate", 100);
 
         assertEquals(110, taxableNonImportedItem.netAmount(), 0.0);
+    }
+
+    @Test
+    public void shouldReturnTheNetAmountByConsideringTheTaxPercentage() {
+        TaxableNonImportedItem taxableNonImportedItem = new TaxableNonImportedItem("Ice cream", 200);
+
+        assertEquals(220, taxableNonImportedItem.netAmount(), 0.0);
     }
 }
