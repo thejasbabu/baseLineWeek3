@@ -19,4 +19,11 @@ public class ImportedNonTaxableItemTest {
 
         assertEquals(10.5, importedNonTaxableItem.netAmount(), 0.0);
     }
+
+    @Test
+    public void shouldReturnTheTaxAmountOfAnItemByConsideringTaxOfFivePercent() {
+        ImportedNonTaxableItem importedNonTaxableItem = new ImportedNonTaxableItem("Perfume", 100);
+
+        assertEquals(5, importedNonTaxableItem.taxAmount(), 0.0);
+    }
 }
