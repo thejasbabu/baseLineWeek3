@@ -14,6 +14,8 @@ public class NonImportedNonTaxableItems implements Item {
 
     @Override
     public double netAmount() {
-        return 25;
+        double netAmount = 0;
+        netAmount = (taxPercentage * amount) + amount;
+        return netAmount;
     }
 }
