@@ -10,6 +10,13 @@ public class ImportedNonTaxableItemTest {
     public void shouldReturnNetAmountAsTwentyFourForAnItemWorthTwenty() {
         ImportedNonTaxableItem importedNonTaxableItem = new ImportedNonTaxableItem("Perfume", 20);
 
-        assertEquals(24.0, importedNonTaxableItem.netAmount(), 0.0);
+        assertEquals(21.0, importedNonTaxableItem.netAmount(), 0.0);
+    }
+
+    @Test
+    public void shouldReturnAmountAfterApplyingTaxPercentageOfFivePercent() {
+        ImportedNonTaxableItem importedNonTaxableItem = new ImportedNonTaxableItem("Perfume", 10);
+
+        assertEquals(10.5, importedNonTaxableItem.netAmount(), 0.0);
     }
 }
