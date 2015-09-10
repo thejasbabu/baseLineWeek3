@@ -19,4 +19,11 @@ public class TaxableImportedItemTest {
 
         assertEquals(69, taxableImportedItem.netAmount(), 0.0);
     }
+
+    @Test
+    public void shouldReturnTaxAmountForAnitemWhichIsBothTaxableAndImported() {
+        TaxableImportedItem taxableImportedItem = new TaxableImportedItem("Imported Perfume", 60);
+
+        assertEquals(9.0, taxableImportedItem.taxAmount(), 0.0);
+    }
 }
