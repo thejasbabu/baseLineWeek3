@@ -1,3 +1,4 @@
+// TaxableNonImportedItem class represents taxable and non imported items
 package com.thoughtworks.baseLine;
 
 public class TaxableNonImportedItem implements Item{
@@ -13,8 +14,15 @@ public class TaxableNonImportedItem implements Item{
     @Override
     public double netAmount() {
         double netAmount = 0;
-        double taxPercentage = 10;
-        netAmount = ((taxPercentage * amount)/100 + amount );
+        netAmount = (taxAmount() + amount );
         return netAmount;
+    }
+
+    @Override
+    public double taxAmount() {
+        double taxAmount = 0;
+        double taxPercentage = 10;
+        taxAmount = (taxPercentage * amount)/100;
+        return taxAmount;
     }
 }

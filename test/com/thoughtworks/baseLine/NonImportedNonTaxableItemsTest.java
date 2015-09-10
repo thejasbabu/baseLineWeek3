@@ -19,4 +19,11 @@ public class NonImportedNonTaxableItemsTest {
 
         assertEquals(20.0, nonImportedNonTaxableItems.netAmount(), 0.0);
     }
+
+    @Test
+    public void shouldReturnZeroAsTaxableAmountForNonImportedNonTaxableItem() {
+        NonImportedNonTaxableItems nonImportedNonTaxableItems = new NonImportedNonTaxableItems("Pizza", 20);
+
+        assertEquals(0.0, nonImportedNonTaxableItems.taxAmount(), 0.0);
+    }
 }

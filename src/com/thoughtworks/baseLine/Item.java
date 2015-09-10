@@ -3,4 +3,5 @@ package com.thoughtworks.baseLine;
 
 public interface Item {
     public double netAmount();
+    public double taxAmount();
 }
