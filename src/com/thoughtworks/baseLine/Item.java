@@ -2,5 +2,5 @@
 package com.thoughtworks.baseLine;
 
 public interface Item {
-    public double netPrice();
+    public double netAmount();
 }
