@@ -12,4 +12,11 @@ public class TaxableImportedItemTest {
 
         assertEquals(46, taxableImportedItem.netAmount(), 0.0);
     }
+
+    @Test
+    public void shouldReturnNetAmountAfterTaxingTaxPercentageOfFifteenPercent() {
+        TaxableImportedItem taxableImportedItem = new TaxableImportedItem("Imported Perfume", 60);
+
+        assertEquals(69, taxableImportedItem.netAmount(), 0.0);
+    }
 }

@@ -13,11 +13,16 @@ public class TaxableImportedItem implements Item {
 
     @Override
     public double netAmount() {
-        return 46;
+        double netAmount = 0;
+        netAmount = (taxAmount()) + amount;
+        return netAmount;
     }
 
     @Override
     public double taxAmount() {
-        return 0;
+        double taxAmount = 0;
+        double taxPercentage = 15;
+        taxAmount = (taxPercentage * amount) / 100;
+        return taxAmount;
     }
 }
